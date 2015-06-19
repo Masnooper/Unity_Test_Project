@@ -9,8 +9,11 @@ namespace UnityStandardAssets.CrossPlatformInput
 
 		public Transform gun;
 		public float sensivity=15;
-		private bool MoveX;
-		private bool Movey;
+		public float MaxX=0.2f;
+		public float MinX=-0.7f;
+		public float Maxy=0.1f;
+		public float Miny=-0.2f;
+
 		public enum AxisOption
 		{
 			// Options for which axes to use
@@ -41,14 +44,15 @@ namespace UnityStandardAssets.CrossPlatformInput
         }
 
 		void Update(){
-			print (m_StartPos);
-			if(transform.position.x<m_StartPos.x-10)
+
+			print (gun.rotation.x);
+			if(transform.position.x<m_StartPos.x-10&&gun.rotation.y<MaxX)
 				gun.Rotate(0,-sensivity*Time.deltaTime,0);
-			else if(transform.position.x>m_StartPos.x+10)
+			   else if(transform.position.x>m_StartPos.x+10&&gun.rotation.y>MinX)
 				gun.Rotate(0,sensivity*Time.deltaTime,0);
-			if(transform.position.y<m_StartPos.y-10)
+			if(transform.position.y<m_StartPos.y-10&&gun.rotation.x>Maxy)
 				gun.Rotate(sensivity*Time.deltaTime,0,0);
-			else if(transform.position.y>m_StartPos.y+10)
+			else if(transform.position.y>m_StartPos.y+10&&gun.rotation.x<Miny)
 				gun.Rotate(-sensivity*Time.deltaTime,0,0);
 		}
 
