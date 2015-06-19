@@ -2,59 +2,136 @@ using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace UnityStandardAssets.Utility
+namespace UnityStandardAssets.CrossPlatformInput
 {
-	public class FPSController : MonoBehaviour
-    {
-        public Vector3andSpace moveUnitsPerSecond;
-        public Vector3andSpace rotateDegreesPerSecond;
-		public Transform PlayerGun;
-		public int JoyMovementRange = 100;
-		private Vector3 m_StartPos;
+	public class FPSController : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
+	{
 
-		void Start(){
-
-			m_StartPos = transform.position;
-
+		public Transform gun;
+		public float sensivity=15;
+		private bool MoveX;
+		private bool Movey;
+		public enum AxisOption
+		{
+			// Options for which axes to use
+			Both, // Use both
+			OnlyHorizontal, // Only horizontal
+			OnlyVertical // Only vertical
 		}
-		public void OnPointerDown(PointerEventData data) { }
+
+		public int MovementRange = 50;
+		public AxisOption axesToUse = AxisOption.Both; // The options for the axes that the still will use
+		public string horizontalAxisName = "Horizontal"; // The name given to the horizontal axis for the cross platform input
+		public string verticalAxisName = "Vertical"; // The name given to the vertical axis for the cross platform input
+
+		Vector3 m_StartPos;
+		bool m_UseX; // Toggle for using the x axis
+		bool m_UseY; // Toggle for using the Y axis
+		CrossPlatformInputManager.VirtualAxis m_HorizontalVirtualAxis; // Reference to the joystick in the cross platform input
+		CrossPlatformInputManager.VirtualAxis m_VerticalVirtualAxis; // Reference to the joystick in the cross platform input
+
+		void OnEnable()
+		{
+			CreateVirtualAxes();
+		}
+
+        void Start()
+        {
+            m_StartPos = transform.position;
+        }
+
+		void Update(){
+			print (m_StartPos);
+			if(transform.position.x<m_StartPos.x-10)
+				gun.Rotate(0,-sensivity*Time.deltaTime,0);
+			else if(transform.position.x>m_StartPos.x+10)
+				gun.Rotate(0,sensivity*Time.deltaTime,0);
+			if(transform.position.y<m_StartPos.y-10)
+				gun.Rotate(sensivity*Time.deltaTime,0,0);
+			else if(transform.position.y>m_StartPos.y+10)
+				gun.Rotate(-sensivity*Time.deltaTime,0,0);
+		}
+
+		void UpdateVirtualAxes(Vector3 value)
+		{
+			var delta = m_StartPos - value;
+			delta.y = -delta.y;
+			delta /= MovementRange;
+			if (m_UseX)
+			{
+				m_HorizontalVirtualAxis.Update(-delta.x);
+			}
+
+			if (m_UseY)
+			{
+				m_VerticalVirtualAxis.Update(delta.y);
+			}
+		}
+
+		void CreateVirtualAxes()
+		{
+			// set axes to use
+			m_UseX = (axesToUse == AxisOption.Both || axesToUse == AxisOption.OnlyHorizontal);
+			m_UseY = (axesToUse == AxisOption.Both || axesToUse == AxisOption.OnlyVertical);
+
+			// create new axes based on axes to use
+			if (m_UseX)
+			{
+				m_HorizontalVirtualAxis = new CrossPlatformInputManager.VirtualAxis(horizontalAxisName);
+				CrossPlatformInputManager.RegisterVirtualAxis(m_HorizontalVirtualAxis);
+			}
+			if (m_UseY)
+			{
+				m_VerticalVirtualAxis = new CrossPlatformInputManager.VirtualAxis(verticalAxisName);
+				CrossPlatformInputManager.RegisterVirtualAxis(m_VerticalVirtualAxis);
+			}
+		}
+
+
 		public void OnDrag(PointerEventData data)
 		{
 			Vector3 newPos = Vector3.zero;
-			
-		
-			int delta1 = (int)(data.position.x - m_StartPos.x);
-			delta1 = Mathf.Clamp (delta1, - JoyMovementRange, JoyMovementRange);
-			newPos.x = delta1;
 
-				
-			print (delta1);
+			if (m_UseX)
+			{
+				int delta = (int)(data.position.x - m_StartPos.x);
+				delta = Mathf.Clamp(delta, - MovementRange, MovementRange);
+				newPos.x = delta;
 
-			
-			
-			int delta2 = (int)(data.position.y - m_StartPos.y);
-			delta2 = Mathf.Clamp (delta2, -JoyMovementRange, JoyMovementRange);
-			newPos.y = delta2;
-				
-			//print (delta);
-			
-			transform.position = new Vector3 (m_StartPos.x + newPos.x, m_StartPos.y + newPos.y, m_StartPos.z + newPos.z);
+			}
 
+			if (m_UseY)
+			{
+				int delta = (int)(data.position.y - m_StartPos.y);
+				delta = Mathf.Clamp(delta, -MovementRange, MovementRange);
+				newPos.y = delta;
+			
+			}
+			transform.position = new Vector3(m_StartPos.x + newPos.x, m_StartPos.y + newPos.y, m_StartPos.z + newPos.z);
+			UpdateVirtualAxes(transform.position);
 		}
-        // Update is called once per frame
-         void Update()
-        {
-            
-        
-            PlayerGun.Rotate(rotateDegreesPerSecond.value*Time.deltaTime, moveUnitsPerSecond.space);
-        }
 
 
-        [Serializable]
-        public class Vector3andSpace
-        {
-            public Vector3 value;
-            public Space space = Space.Self;
-        }
-    }
+		public void OnPointerUp(PointerEventData data)
+		{
+			transform.position = m_StartPos;
+			UpdateVirtualAxes(m_StartPos);
+		}
+
+
+		public void OnPointerDown(PointerEventData data) { }
+
+		void OnDisable()
+		{
+			// remove the joysticks from the cross platform input
+			if (m_UseX)
+			{
+				m_HorizontalVirtualAxis.Remove();
+			}
+			if (m_UseY)
+			{
+				m_VerticalVirtualAxis.Remove();
+			}
+		}
+	}
 }
