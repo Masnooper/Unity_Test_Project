@@ -696,6 +696,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gun: {fileID: 917593619}
   sensivity: 15
+  MaxX: -.200000003
+  MinX: -.699999988
+  Maxy: .100000001
+  Miny: -.200000003
   MovementRange: 50
   axesToUse: 0
   horizontalAxisName: Horizontal
