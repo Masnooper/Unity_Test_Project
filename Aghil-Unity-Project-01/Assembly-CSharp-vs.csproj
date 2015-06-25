@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Aim.cs" />
      <Compile Include="Assets\Camera Filter Pack\Scripts\CameraFilterPack_Distortion_FishEye.cs" />
      <Compile Include="Assets\FPSController.cs" />
      <None Include="Assets\Camera Filter Pack\Resources\CameraFilterPack_Distortion_FishEye.shader" />

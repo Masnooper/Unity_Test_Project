@@ -9,11 +9,11 @@ namespace UnityStandardAssets.CrossPlatformInput
 
 		public Transform gun;
 		public float sensivity=15;
-		public float MaxX=0.2f;
-		public float MinX=-0.7f;
-		public float Maxy=0.1f;
+		public float MaxX=-0.3f;
+		public float MinX=0.86f;
+		public float Maxy=0.2f;
 		public float Miny=-0.2f;
-
+		private float Zrot;
 		public enum AxisOption
 		{
 			// Options for which axes to use
@@ -41,19 +41,24 @@ namespace UnityStandardAssets.CrossPlatformInput
         void Start()
         {
             m_StartPos = transform.position;
+			Zrot = gun.rotation.z;
         }
 
 		void Update(){
 
-			print (gun.rotation.x);
-			if(transform.position.x<m_StartPos.x-10&&gun.rotation.y<MaxX)
-				gun.Rotate(0,-sensivity*Time.deltaTime,0);
-			   else if(transform.position.x>m_StartPos.x+10&&gun.rotation.y>MinX)
-				gun.Rotate(0,sensivity*Time.deltaTime,0);
-			if(transform.position.y<m_StartPos.y-10&&gun.rotation.x>Maxy)
-				gun.Rotate(sensivity*Time.deltaTime,0,0);
-			else if(transform.position.y>m_StartPos.y+10&&gun.rotation.x<Miny)
-				gun.Rotate(-sensivity*Time.deltaTime,0,0);
+		//	print (gun.rotation.y);
+			if(transform.position.x<m_StartPos.x-10&&gun.rotation.y>MaxX)
+				gun.Rotate(0,-sensivity*Time.deltaTime,0,Space.Self);
+			   else if(transform.position.x>m_StartPos.x+10&&gun.rotation.y<MinX)
+				gun.Rotate(0,sensivity*Time.deltaTime,0,Space.Self);
+			if(transform.position.y<m_StartPos.y-10&&gun.rotation.x<Maxy)
+				gun.Rotate(sensivity*Time.deltaTime,0,0,Space.Self);
+			else if(transform.position.y>m_StartPos.y+10&&gun.rotation.x>Miny)
+				gun.Rotate(-sensivity*Time.deltaTime,0,0,Space.Self);
+
+			gun.rotation =new Quaternion(gun.rotation.x,gun.rotation.y,Zrot,gun.rotation.w);
+
+
 		}
 
 		void UpdateVirtualAxes(Vector3 value)
