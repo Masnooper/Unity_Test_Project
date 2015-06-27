@@ -47,13 +47,13 @@ namespace UnityStandardAssets.CrossPlatformInput
 		void Update(){
 
 		//	print (gun.rotation.y);
-			if(transform.position.x<m_StartPos.x-10&&gun.rotation.y>MaxX)
+			if(transform.position.x<m_StartPos.x-3&&gun.rotation.y>MaxX)
 				gun.Rotate(0,-sensivity*Time.deltaTime,0,Space.Self);
-			   else if(transform.position.x>m_StartPos.x+10&&gun.rotation.y<MinX)
+			   else if(transform.position.x>m_StartPos.x+3&&gun.rotation.y<MinX)
 				gun.Rotate(0,sensivity*Time.deltaTime,0,Space.Self);
-			if(transform.position.y<m_StartPos.y-10&&gun.rotation.x<Maxy)
+			if(transform.position.y<m_StartPos.y-3&&gun.rotation.x<Maxy)
 				gun.Rotate(sensivity*Time.deltaTime,0,0,Space.Self);
-			else if(transform.position.y>m_StartPos.y+10&&gun.rotation.x>Miny)
+			else if(transform.position.y>m_StartPos.y+3&&gun.rotation.x>Miny)
 				gun.Rotate(-sensivity*Time.deltaTime,0,0,Space.Self);
 
 			gun.rotation =new Quaternion(gun.rotation.x,gun.rotation.y,Zrot,gun.rotation.w);
