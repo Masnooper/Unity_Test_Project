@@ -448,6 +448,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 917593619}
+  - 95: {fileID: 917593620}
   m_Layer: 0
   m_Name: MG42 Body
   m_TagString: Untagged
@@ -468,6 +469,23 @@ Transform:
   - {fileID: 762671084}
   m_Father: {fileID: 206934197}
   m_RootOrder: 1
+--- !u!95 &917593620
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 917593618}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c594b7ab6c4641d488cd33a9a41b4121, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &1269597126 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: a4da014a687c4fc4dbaf90a066c13944, type: 3}
