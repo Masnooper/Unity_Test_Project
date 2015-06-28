@@ -23,23 +23,18 @@ AnimationClip:
         tangentMode: 0
       - time: .0166666675
         value: {x: .00100000005, y: -0, z: -.00600000005}
-        inSlope: {x: -.0599890426, y: 2.22336093e-05, z: -.239996836}
-        outSlope: {x: -.0599890426, y: 2.22336093e-05, z: -.239996836}
-        tangentMode: 0
-      - time: .0333333351
-        value: {x: -.00200000009, y: -0, z: -.00800000038}
-        inSlope: {x: -.02999999, y: .0300000031, z: .660000026}
-        outSlope: {x: -.02999999, y: .0300000031, z: .660000026}
+        inSlope: {x: 1.09486282e-05, y: 2.22336093e-05, z: -.194996834}
+        outSlope: {x: 1.09486282e-05, y: 2.22336093e-05, z: -.194996834}
         tangentMode: 0
       - time: .0500000007
-        value: {x: 0, y: .00100000005, z: .0160000008}
-        inSlope: {x: .0599890538, y: -2.22269446e-05, z: .23999691}
-        outSlope: {x: .0599890538, y: -2.22269446e-05, z: .23999691}
+        value: {x: -.00100000005, y: -0, z: -.00700000022}
+        inSlope: {x: -1.09598041e-05, y: -2.22336075e-05, z: .194996819}
+        outSlope: {x: -1.09598041e-05, y: -2.22336075e-05, z: .194996819}
         tangentMode: 0
       - time: .0666666701
         value: {x: -3.65077625e-07, y: -7.41120346e-07, z: -1.0528975e-07}
-        inSlope: {x: -2.19046542e-05, y: -.06004446, z: -.960006237}
-        outSlope: {x: -2.19046542e-05, y: -.06004446, z: -.960006237}
+        inSlope: {x: .0599780865, y: -4.4467215e-05, z: .419993639}
+        outSlope: {x: .0599780865, y: -4.4467215e-05, z: .419993639}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -89,23 +84,18 @@ AnimationClip:
         tangentMode: 10
       - time: .0166666675
         value: .00100000005
-        inSlope: -.0599890426
-        outSlope: -.0599890426
-        tangentMode: 10
-      - time: .0333333351
-        value: -.00200000009
-        inSlope: -.02999999
-        outSlope: -.02999999
+        inSlope: 1.09486282e-05
+        outSlope: 1.09486282e-05
         tangentMode: 10
       - time: .0500000007
-        value: 0
-        inSlope: .0599890538
-        outSlope: .0599890538
+        value: -.00100000005
+        inSlope: -1.09598041e-05
+        outSlope: -1.09598041e-05
         tangentMode: 10
       - time: .0666666701
         value: -3.65077625e-07
-        inSlope: -2.19046542e-05
-        outSlope: -2.19046542e-05
+        inSlope: .0599780865
+        outSlope: .0599780865
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -126,20 +116,15 @@ AnimationClip:
         inSlope: 2.22336093e-05
         outSlope: 2.22336093e-05
         tangentMode: 10
-      - time: .0333333351
-        value: -0
-        inSlope: .0300000031
-        outSlope: .0300000031
-        tangentMode: 10
       - time: .0500000007
-        value: .00100000005
-        inSlope: -2.22269446e-05
-        outSlope: -2.22269446e-05
+        value: -0
+        inSlope: -2.22336075e-05
+        outSlope: -2.22336075e-05
         tangentMode: 10
       - time: .0666666701
         value: -7.41120346e-07
-        inSlope: -.06004446
-        outSlope: -.06004446
+        inSlope: -4.4467215e-05
+        outSlope: -4.4467215e-05
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -157,23 +142,18 @@ AnimationClip:
         tangentMode: 10
       - time: .0166666675
         value: -.00600000005
-        inSlope: -.239996836
-        outSlope: -.239996836
-        tangentMode: 10
-      - time: .0333333351
-        value: -.00800000038
-        inSlope: .660000026
-        outSlope: .660000026
+        inSlope: -.194996834
+        outSlope: -.194996834
         tangentMode: 10
       - time: .0500000007
-        value: .0160000008
-        inSlope: .23999691
-        outSlope: .23999691
+        value: -.00700000022
+        inSlope: .194996819
+        outSlope: .194996819
         tangentMode: 10
       - time: .0666666701
         value: -1.0528975e-07
-        inSlope: -.960006237
-        outSlope: -.960006237
+        inSlope: .419993639
+        outSlope: .419993639
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2

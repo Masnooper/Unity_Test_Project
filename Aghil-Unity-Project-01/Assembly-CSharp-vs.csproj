@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Camera Filter Pack\Scripts\CameraFilterPack_Distortion_FishEye.cs" />
-     <Compile Include="Assets\FPSController.cs" />
+     <Compile Include="Assets\Scripts\BulletScript.cs" />
+     <Compile Include="Assets\Scripts\FPSController.cs" />
+     <Compile Include="Assets\Scripts\ShootManager.cs" />
      <None Include="Assets\Camera Filter Pack\Resources\CameraFilterPack_Distortion_FishEye.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
  <Reference Include="UnityEngine.UI">
