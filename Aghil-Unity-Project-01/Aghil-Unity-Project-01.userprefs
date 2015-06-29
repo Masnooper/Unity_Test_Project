@@ -1,11 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ShootManager.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Temp\Compiled-Skybox-Procedural.shader">
     <Files>
-      <File FileName="Assets\Scripts\ShootManager.cs" Line="57" Column="41" />
-      <File FileName="Assets\Scripts\FPSController.cs" Line="54" Column="58" />
-      <File FileName="Assets\Scripts\BulletScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TargetScript.cs" Line="8" Column="1" />
+      <File FileName="Temp\Compiled-Skybox-Procedural.shader" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
