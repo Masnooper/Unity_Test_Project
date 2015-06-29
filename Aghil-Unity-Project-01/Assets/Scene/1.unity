@@ -142,15 +142,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400004, guid: 269089fd85aeaca43abe000c22bf7734, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .00304600596
+      value: .00400000019
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 269089fd85aeaca43abe000c22bf7734, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -.144788757
+      value: -.122000001
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 269089fd85aeaca43abe000c22bf7734, type: 2}
       propertyPath: m_LocalPosition.z
-      value: .891080201
+      value: .888999999
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 269089fd85aeaca43abe000c22bf7734, type: 2}
       propertyPath: m_LocalRotation.x
@@ -175,6 +175,10 @@ Prefab:
     - target: {fileID: 100004, guid: 269089fd85aeaca43abe000c22bf7734, type: 2}
       propertyPath: m_Name
       value: 'SHoot FX '
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900004, guid: 269089fd85aeaca43abe000c22bf7734, type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 269089fd85aeaca43abe000c22bf7734, type: 2}
