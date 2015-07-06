@@ -54,7 +54,6 @@ public class ShootManager : MonoBehaviour {
 		if (MG42Stray < MG42MaxStray)
 			MG42Stray += 0.01f;
 
-		MG42Body.Rotate(-MG42Stray*RecoilPower*Time.deltaTime,Random.Range(MG42Stray*RecoilPower,-MG42Stray*RecoilPower)*Time.deltaTime,0,Space.Self);
 
 		StartShoot = true;
 		CancelInvoke ("FireWeapon");

@@ -9,11 +9,12 @@ namespace UnityStandardAssets.CrossPlatformInput
 
 		public Transform gun;
 		public float sensivity=15;
-		public float MaxX=-0.3f;
-		public float MinX=0.86f;
-		public float Maxy=0.2f;
-		public float Miny=-0.2f;
-		private float Zrot;
+		public float MaxX=-330f;
+		public float MinX=120f;
+		public float Maxy=330;
+		public float Miny=29;
+		private float Angle;
+		private float AngleY;
 		public enum AxisOption
 		{
 			// Options for which axes to use
@@ -25,7 +26,7 @@ namespace UnityStandardAssets.CrossPlatformInput
 
 
 
-		public int MovementRange = 50;
+		public int MovementRange = 30;
 		public AxisOption axesToUse = AxisOption.Both; // The options for the axes that the still will use
 		public string horizontalAxisName = "Horizontal"; // The name given to the horizontal axis for the cross platform input
 		public string verticalAxisName = "Vertical"; // The name given to the vertical axis for the cross platform input
@@ -44,22 +45,33 @@ namespace UnityStandardAssets.CrossPlatformInput
         void Start()
         {
             m_StartPos = transform.position;
-			Zrot = gun.rotation.z;
+
         }
 
 		void Update(){
+			if (gun.eulerAngles.y < MaxX+2)
+				Angle = gun.eulerAngles.y;
+			else if(gun.eulerAngles.y<360&&-gun.eulerAngles.y>MinX)
+				Angle = MinX;
 
-		//	print (gun.rotation.y);
-			if(transform.position.x<m_StartPos.x-3&&gun.rotation.y>MaxX)
-				gun.Rotate(0,-sensivity*Time.deltaTime,0,Space.Self);
-			   else if(transform.position.x>m_StartPos.x+3&&gun.rotation.y<MinX)
-				gun.Rotate(0,sensivity*Time.deltaTime,0,Space.Self);
-			if(transform.position.y<m_StartPos.y-3&&gun.rotation.x<Maxy)
-				gun.Rotate(sensivity*Time.deltaTime,0,0,Space.Self);
-			else if(transform.position.y>m_StartPos.y+3&&gun.rotation.x>Miny)
-				gun.Rotate(-sensivity*Time.deltaTime,0,0,Space.Self);
+			if(gun.eulerAngles.x<Miny+3&&gun.eulerAngles.x>Miny)
+				AngleY = Miny;
+			else if (gun.eulerAngles.x < Maxy+2)
+				AngleY = gun.eulerAngles.x;
 
-			gun.rotation =new Quaternion(gun.rotation.x,gun.rotation.y,Zrot,gun.rotation.w);
+
+		
+			if(transform.position.x<m_StartPos.x&&Angle!=MinX)
+				gun.eulerAngles = new Vector3(gun.eulerAngles.x, gun.eulerAngles.y-sensivity*Time.deltaTime , gun.eulerAngles.z);
+			else if(transform.position.x>m_StartPos.x&&Angle<MaxX)
+				gun.eulerAngles = new Vector3(gun.eulerAngles.x, gun.eulerAngles.y+sensivity*Time.deltaTime , gun.eulerAngles.z);
+		
+			if(transform.position.y<m_StartPos.y&& AngleY!=Miny)
+				gun.eulerAngles = new Vector3(gun.eulerAngles.x+sensivity*Time.deltaTime, gun.eulerAngles.y , gun.eulerAngles.z);
+			else if(transform.position.y>m_StartPos.y&&AngleY<Maxy)
+				gun.eulerAngles = new Vector3(gun.eulerAngles.x-sensivity*Time.deltaTime, gun.eulerAngles.y , gun.eulerAngles.z);
+
+		
 
 
 		}
@@ -128,6 +140,7 @@ namespace UnityStandardAssets.CrossPlatformInput
 		{
 			transform.position = m_StartPos;
 			UpdateVirtualAxes(m_StartPos);
+			print ("touched");
 		}
 
 

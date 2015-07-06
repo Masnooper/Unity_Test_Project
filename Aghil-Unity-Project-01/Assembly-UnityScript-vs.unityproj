@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{0CECEFE4-518D-0F88-04A4-1562C6C0F954}</ProjectGuid>
+	<ProjectGuid>{2BD19079-ABED-8B7F-4AD9-2486A4A5461E}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<AssemblyName>Assembly-UnityScript</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
@@ -46,15 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Imported packages\CNControls\Scripts\CNAbstractController.cs" />
-     <Compile Include="Assets\Imported packages\CNControls\Scripts\CNJoystick.cs" />
-     <Compile Include="Assets\Imported packages\CNControls\Scripts\CNThrowableTouchpad.cs" />
-     <Compile Include="Assets\Imported packages\CNControls\Scripts\CNTouchpad.cs" />
-     <Compile Include="Assets\Imported packages\Camera Filter Pack\Scripts\CameraFilterPack_Distortion_FishEye.cs" />
-     <Compile Include="Assets\Scripts\FPSController.cs" />
-     <Compile Include="Assets\Scripts\ShootManager.cs" />
-     <Compile Include="Assets\Scripts\TargetScript.cs" />
-     <Compile Include="Assets\Scripts\TouchControl.cs" />
+     <Compile Include="Assets\Scripts\Fadein.js" />
      <None Include="Assets\Imported packages\Camera Filter Pack\Resources\CameraFilterPack_Distortion_FishEye.shader" />
      <None Include="Assets\Texture and material\Muzzle Flash\Shaders\WFX_S Particle Add A8.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
