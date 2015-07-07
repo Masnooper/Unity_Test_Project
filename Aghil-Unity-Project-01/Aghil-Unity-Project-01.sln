@@ -7,8 +7,6 @@ Project("{727F07A7-F30F-15E8-ACAE-D6771D14009B}") = "Aghil-Unity-Project-01", "A
 EndProject
 Project("{727F07A7-F30F-15E8-ACAE-D6771D14009B}") = "Aghil-Unity-Project-01", "Assembly-CSharp-Editor.csproj", "{0ED05AB5-3DF4-D4AA-3305-207B6ACAD9DC}"
 EndProject
-Project("{727F07A7-F30F-15E8-ACAE-D6771D14009B}") = "Aghil-Unity-Project-01", "Assembly-UnityScript.unityproj", "{2BD19079-ABED-8B7F-4AD9-2486A4A5461E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,15 +25,11 @@ Global
 		{0ED05AB5-3DF4-D4AA-3305-207B6ACAD9DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0ED05AB5-3DF4-D4AA-3305-207B6ACAD9DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0ED05AB5-3DF4-D4AA-3305-207B6ACAD9DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2BD19079-ABED-8B7F-4AD9-2486A4A5461E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2BD19079-ABED-8B7F-4AD9-2486A4A5461E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2BD19079-ABED-8B7F-4AD9-2486A4A5461E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2BD19079-ABED-8B7F-4AD9-2486A4A5461E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																																						GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

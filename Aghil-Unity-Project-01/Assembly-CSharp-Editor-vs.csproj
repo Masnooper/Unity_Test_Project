@@ -58,9 +58,6 @@
      <None Include="Assets\Imported packages\Camera Filter Pack\Resources\CameraFilterPack_Distortion_FishEye.shader" />
      <None Include="Assets\Texture and material\Muzzle Flash\Shaders\WFX_S Particle Add A8.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
- <Reference Include="Assembly-UnityScript">
- <HintPath>C:/Users/arjomandi/Documents/GitHub/Unity_Test_Project/Aghil-Unity-Project-01/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

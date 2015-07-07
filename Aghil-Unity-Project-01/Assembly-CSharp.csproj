@@ -51,7 +51,8 @@
      <Compile Include="Assets\Imported packages\CNControls\Scripts\CNThrowableTouchpad.cs" />
      <Compile Include="Assets\Imported packages\CNControls\Scripts\CNTouchpad.cs" />
      <Compile Include="Assets\Imported packages\Camera Filter Pack\Scripts\CameraFilterPack_Distortion_FishEye.cs" />
-     <Compile Include="Assets\Scripts\FPSController.cs" />
+     <Compile Include="Assets\Scripts\Fadein.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\ShootManager.cs" />
      <Compile Include="Assets\Scripts\TargetScript.cs" />
      <Compile Include="Assets\Scripts\TouchControl.cs" />

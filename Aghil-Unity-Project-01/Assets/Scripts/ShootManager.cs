@@ -33,8 +33,7 @@ public class ShootManager : MonoBehaviour {
 	void FireWeapon()
 		
 	{
-	
-
+			
 			MG42Animator.SetBool("Shoot",true);
 			MuzzleFlash.SetActive (true);
 			var randomNumberX = Random.Range(-MG42Stray, MG42Stray);

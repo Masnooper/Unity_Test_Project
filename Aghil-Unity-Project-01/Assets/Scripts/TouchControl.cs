@@ -21,7 +21,7 @@ namespace UnityStandardAssets.CrossPlatformInput
 		public float dampingTime = 0.2f;
 		public bool autoZeroVerticalOnMobile = true;
 		public bool autoZeroHorizontalOnMobile = false;
-		public CNJoystick RotateJoystick;
+		public CNJoystick JoyStick;
 
 		private Vector3 m_TargetAngles;
 		private Vector3 m_FollowAngles;
@@ -45,9 +45,9 @@ namespace UnityStandardAssets.CrossPlatformInput
 			float inputH;
 			float inputV;
 
-				inputH = RotateJoystick.GetAxis("Horizontal");
-				inputV = RotateJoystick.GetAxis("Vertical");
-				
+				inputH = JoyStick.GetAxis("Horizontal");
+				inputV = JoyStick.GetAxis("Vertical");
+						
 				// wrap values to avoid springing quickly the wrong way from positive to negative
 				if (m_TargetAngles.y > 180)
 				{
