@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour {
 			}
 		}
 	}
-	void OnSwipeUp(){
+	void DoAim(){
 		MG42Body.GetComponent<TouchControl> ().enabled = true;
 		MG42Cam.SetActive (true);
 		Joystick.SetActive (true);

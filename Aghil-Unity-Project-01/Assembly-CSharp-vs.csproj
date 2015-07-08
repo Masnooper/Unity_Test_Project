@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\Fadein.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\ShootManager.cs" />
+     <Compile Include="Assets\Scripts\TapToAim.cs" />
      <Compile Include="Assets\Scripts\TargetScript.cs" />
      <Compile Include="Assets\Scripts\TouchControl.cs" />
      <None Include="Assets\Imported packages\Camera Filter Pack\Resources\CameraFilterPack_Distortion_FishEye.shader" />
