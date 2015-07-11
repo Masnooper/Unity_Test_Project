@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour {
 	public GameObject Joystick;
 	public GameObject fireBTN;
 	public GameObject MG42Body;
+	public GameObject NestImage;
+	public GameObject MG42Object;
 
 
 	private Vector3 MG42Default;
@@ -67,13 +69,18 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 	void DoAim(){
+		MG42Object.SetActive (true);
 		MG42Body.GetComponent<TouchControl> ().enabled = true;
 		MG42Cam.SetActive (true);
+		NestImage.SetActive (false);
 		Joystick.SetActive (true);
 		fireBTN.SetActive (true);
 		MainCam.SetActive (false);
+
 	}
 	void OnSwipeDown(){
+		NestImage.SetActive (true);
+		MG42Object.SetActive (false);
 		MG42Body.GetComponent<TouchControl> ().enabled = false;
 		Joystick.SetActive (false);
 		fireBTN.SetActive (false);
