@@ -1,11 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TouchControl.cs">
     <Files>
-      <File FileName="Assets\Scripts\TapToAim.cs" Line="10" Column="2" />
-      <File FileName="Assets\Scripts\GameManager.cs" Line="83" Column="30" />
-      <File FileName="Assets\Scripts\Fadein.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TouchControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="106" Column="3" />
+      <File FileName="Assets\Scripts\Fadein.cs" Line="52" Column="2" />
+      <File FileName="Assets\Scripts\TouchControl.cs" Line="102" Column="4" />
       <File FileName="Assets\Scripts\ShootManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Standard Assets\CrossPlatformInput\Scripts\Joystick.cs" Line="1" Column="1" />
     </Files>

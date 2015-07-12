@@ -8,6 +8,7 @@ public class Fadein : MonoBehaviour {
 	public float AlphaTo= 0;
 	public float Speed;
 	private bool StartFade;
+	public GameObject GameManager;
 	// Use this for initialization
 	void Start () {
 		if(AlphaTo>0){
@@ -39,11 +40,14 @@ public class Fadein : MonoBehaviour {
 			
 			GUI.color = new Color(1,1,1,alpha);
 			GUI.DrawTexture(new Rect(0,0,Screen.width,Screen.height),bg);
-			if (alpha<0.006f){
+			if (alpha<0.02f){
 				StartFade=false;
 				FadeIn();
+				if(gameObject.name=="RPG Camera_sight")
+					GameManager.SendMessage ("ZoomRPG",SendMessageOptions.DontRequireReceiver);
 				}
 			
 		}
 }
+
 }

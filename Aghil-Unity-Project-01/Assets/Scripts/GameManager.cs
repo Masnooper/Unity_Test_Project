@@ -15,8 +15,10 @@ public class GameManager : MonoBehaviour {
 	public GameObject MG42Body;
 	public GameObject NestImage;
 	public GameObject MG42Object;
+	public GameObject RPGObject;
+	public Animator RPGAnimator;
 
-
+	private bool StartRPGzoom;
 	private Vector3 MG42Default;
 	private Vector2 StartPos;
 	private int SwipeID = -1;
@@ -28,7 +30,8 @@ public class GameManager : MonoBehaviour {
 	}
 	void Update ()
 	{
-		print (MG42Body.transform.localEulerAngles);
+
+
 		if (MessageTarget == null)
 			MessageTarget = gameObject;
 		foreach (var T in Input.touches)
@@ -81,6 +84,7 @@ public class GameManager : MonoBehaviour {
 	void OnSwipeDown(){
 		NestImage.SetActive (true);
 		MG42Object.SetActive (false);
+		RPGObject.SetActive (false);
 		MG42Body.GetComponent<TouchControl> ().enabled = false;
 		Joystick.SetActive (false);
 		fireBTN.SetActive (false);
@@ -88,5 +92,18 @@ public class GameManager : MonoBehaviour {
 		MG42Cam.SetActive (false);
 		MainCam.SetActive (true);
 	}
+	void DoAimRPG(){
+		MG42Object.SetActive (false);
+		RPGObject.SetActive (true);
+		NestImage.SetActive (false);
+		Joystick.SetActive (true);
+		fireBTN.SetActive (true);
+		MainCam.SetActive (false);
+		
+	}
+	public void disableAnimator(){
+		RPGAnimator.enabled = false;
+	}
+
 	
 }

@@ -100,5 +100,6 @@ namespace UnityStandardAssets.CrossPlatformInput
 			// update the actual gameobject's rotation
 			transform.localRotation = m_OriginalRotation*Quaternion.Euler(-m_FollowAngles.x, m_FollowAngles.y, 0);
 		}
+
 	}
 }
