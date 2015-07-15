@@ -13,6 +13,13 @@ public class ShootManager : MonoBehaviour {
 	public float RecoilPower;
 	public GameObject MuzzleFlash;
 	private Quaternion ShootpointorginRot;
+
+	public Animator RPGAnimator;
+	public GameObject RPGMuzzelFlash;
+	public Transform RPGShootPoint;
+	public GameObject RPGLoadedRocket;
+	public GameObject RPGRocket;
+	private bool IsRPGReady;
 	// Use this for initialization
 	void Start () {
 	
@@ -63,5 +70,19 @@ public class ShootManager : MonoBehaviour {
 		MG42Animator.SetBool("Shoot",false);
 		StartShoot = false;
 		CancelInvoke ("FireWeapon");
+	}
+	void RPGfire(){
+		if (IsRPGReady) {
+			IsRPGReady = false;
+			RPGLoadedRocket.SetActive (false);
+			RPGMuzzelFlash.SetActive (true);
+			RPGAnimator.SetTrigger ("Fire");
+			Instantiate (RPGRocket, RPGShootPoint.position, RPGShootPoint.rotation);
+		}
+
+	}
+	 void RPGReady(){
+		IsRPGReady = true;
+
 	}
 }

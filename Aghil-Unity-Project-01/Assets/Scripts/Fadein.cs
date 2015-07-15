@@ -43,8 +43,7 @@ public class Fadein : MonoBehaviour {
 			if (alpha<0.02f){
 				StartFade=false;
 				FadeIn();
-				if(gameObject.name=="RPG Camera_sight")
-					GameManager.SendMessage ("ZoomRPG",SendMessageOptions.DontRequireReceiver);
+
 				}
 			
 		}

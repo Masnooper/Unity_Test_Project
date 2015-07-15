@@ -1,12 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TouchControl.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\RPGReady.cs">
     <Files>
-      <File FileName="Assets\Scripts\GameManager.cs" Line="106" Column="3" />
-      <File FileName="Assets\Scripts\Fadein.cs" Line="52" Column="2" />
-      <File FileName="Assets\Scripts\TouchControl.cs" Line="102" Column="4" />
-      <File FileName="Assets\Scripts\ShootManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ShootManager.cs" Line="84" Column="2" />
+      <File FileName="Assets\Scripts\RPGRocket.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Fadein.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TouchControl.cs" Line="1" Column="1" />
       <File FileName="Assets\Standard Assets\CrossPlatformInput\Scripts\Joystick.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\RPGReady.cs" Line="12" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

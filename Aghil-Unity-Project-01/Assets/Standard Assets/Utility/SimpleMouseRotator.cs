@@ -1,9 +1,8 @@
 using System;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityStandardAssets.CrossPlatformInput;
 
-namespace UnityStandardAssets.CrossPlatformInput
+namespace UnityStandardAssets.Utility
 {
     public class SimpleMouseRotator : MonoBehaviour
     {
@@ -22,7 +21,7 @@ namespace UnityStandardAssets.CrossPlatformInput
         public bool autoZeroVerticalOnMobile = true;
         public bool autoZeroHorizontalOnMobile = false;
         public bool relative = true;
-		public GameObject JoyStick;
+        
         
         private Vector3 m_TargetAngles;
         private Vector3 m_FollowAngles;
@@ -33,7 +32,6 @@ namespace UnityStandardAssets.CrossPlatformInput
         private void Start()
         {
             m_OriginalRotation = transform.localRotation;
-
         }
 
 

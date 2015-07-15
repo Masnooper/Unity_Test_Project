@@ -11,12 +11,16 @@ public class GameManager : MonoBehaviour {
 	public bool sendRightMessage = true;
 	public GameObject MessageTarget = null;
 	public GameObject Joystick;
-	public GameObject fireBTN;
+	public GameObject fireBtnMG42;
+	public GameObject fireBtnRPG;
+	public GameObject FireBtnSVD;
 	public GameObject MG42Body;
 	public GameObject NestImage;
 	public GameObject MG42Object;
 	public GameObject RPGObject;
 	public Animator RPGAnimator;
+
+	public GameObject SVDObject;
 
 	private bool StartRPGzoom;
 	private Vector3 MG42Default;
@@ -26,7 +30,7 @@ public class GameManager : MonoBehaviour {
 		MG42Default = MG42Body.transform.eulerAngles;
 		MG42Body.GetComponent<TouchControl> ().enabled = false;
 		Joystick.SetActive (false);
-		fireBTN.SetActive (false);
+		fireBtnMG42.SetActive (false);
 	}
 	void Update ()
 	{
@@ -77,7 +81,7 @@ public class GameManager : MonoBehaviour {
 		MG42Cam.SetActive (true);
 		NestImage.SetActive (false);
 		Joystick.SetActive (true);
-		fireBTN.SetActive (true);
+		fireBtnMG42.SetActive (true);
 		MainCam.SetActive (false);
 
 	}
@@ -87,7 +91,8 @@ public class GameManager : MonoBehaviour {
 		RPGObject.SetActive (false);
 		MG42Body.GetComponent<TouchControl> ().enabled = false;
 		Joystick.SetActive (false);
-		fireBTN.SetActive (false);
+		fireBtnMG42.SetActive (false);
+		fireBtnRPG.SetActive (false);
 		MG42Body.transform.localRotation= Quaternion.Euler(MG42Default);
 		MG42Cam.SetActive (false);
 		MainCam.SetActive (true);
@@ -97,12 +102,19 @@ public class GameManager : MonoBehaviour {
 		RPGObject.SetActive (true);
 		NestImage.SetActive (false);
 		Joystick.SetActive (true);
-		fireBTN.SetActive (true);
+		fireBtnRPG.SetActive (true);
 		MainCam.SetActive (false);
 		
 	}
-	public void disableAnimator(){
-		RPGAnimator.enabled = false;
+
+	void DoSVDAim(){
+		MG42Object.SetActive (false);
+		SVDObject.SetActive (true);
+		NestImage.SetActive (false);
+		Joystick.SetActive (true);
+		FireBtnSVD.SetActive (true);
+		MainCam.SetActive (false);
+
 	}
 
 	
