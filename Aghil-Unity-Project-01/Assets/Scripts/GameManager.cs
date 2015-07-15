@@ -89,10 +89,12 @@ public class GameManager : MonoBehaviour {
 		NestImage.SetActive (true);
 		MG42Object.SetActive (false);
 		RPGObject.SetActive (false);
+		SVDObject.SetActive (false);
 		MG42Body.GetComponent<TouchControl> ().enabled = false;
 		Joystick.SetActive (false);
 		fireBtnMG42.SetActive (false);
 		fireBtnRPG.SetActive (false);
+		FireBtnSVD.SetActive (false);
 		MG42Body.transform.localRotation= Quaternion.Euler(MG42Default);
 		MG42Cam.SetActive (false);
 		MainCam.SetActive (true);

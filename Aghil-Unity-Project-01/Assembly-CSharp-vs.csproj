@@ -55,8 +55,10 @@
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\RPGReady.cs" />
      <Compile Include="Assets\Scripts\RPGRocket.cs" />
+     <Compile Include="Assets\Scripts\SVDReady.cs" />
      <Compile Include="Assets\Scripts\ShootManager.cs" />
      <Compile Include="Assets\Scripts\TargetScript.cs" />
+     <Compile Include="Assets\Scripts\Test.cs" />
      <Compile Include="Assets\Scripts\TouchControl.cs" />
      <None Include="Assets\Imported packages\Camera Filter Pack\Resources\CameraFilterPack_Distortion_FishEye.shader" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />

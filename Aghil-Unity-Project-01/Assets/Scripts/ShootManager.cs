@@ -19,7 +19,12 @@ public class ShootManager : MonoBehaviour {
 	public Transform RPGShootPoint;
 	public GameObject RPGLoadedRocket;
 	public GameObject RPGRocket;
+
+	public GameObject SVDObject;
+	public Camera ScopeCamSVD;
 	private bool IsRPGReady;
+	private bool IsSVDReady;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -84,5 +89,18 @@ public class ShootManager : MonoBehaviour {
 	 void RPGReady(){
 		IsRPGReady = true;
 
+	}
+	void SVDReady(){
+		IsSVDReady = true;
+		
+	}
+	void SVDFire(){
+		if (IsSVDReady) {
+			//SVDObject.transform.rotation =new Quaternion (SVDObject.transform.rotation.x-1,SVDObject.transform.rotation.y+0.5f,SVDObject.transform.rotation.z,SVDObject.transform.rotation.w);
+			Ray ray = ScopeCamSVD.ViewportPointToRay (new Vector3(0.5f,0.5f,0));   
+			RaycastHit hit;
+			Physics.Raycast (ray,out hit);
+			print (hit.collider.name + " hit");
+		}
 	}
 }
