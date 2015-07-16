@@ -21,6 +21,7 @@ public class ShootManager : MonoBehaviour {
 	public GameObject RPGRocket;
 
 	public GameObject SVDObject;
+	public Animator SVDAminator;
 	public Camera ScopeCamSVD;
 	private bool IsRPGReady;
 	private bool IsSVDReady;
@@ -96,7 +97,7 @@ public class ShootManager : MonoBehaviour {
 	}
 	void SVDFire(){
 		if (IsSVDReady) {
-			//SVDObject.transform.rotation =new Quaternion (SVDObject.transform.rotation.x-1,SVDObject.transform.rotation.y+0.5f,SVDObject.transform.rotation.z,SVDObject.transform.rotation.w);
+			SVDAminator.SetTrigger ("Fire");
 			Ray ray = ScopeCamSVD.ViewportPointToRay (new Vector3(0.5f,0.5f,0));   
 			RaycastHit hit;
 			Physics.Raycast (ray,out hit);

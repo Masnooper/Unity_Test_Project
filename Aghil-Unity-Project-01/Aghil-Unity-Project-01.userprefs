@@ -1,16 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ShootManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\Test.cs" Line="19" Column="38" />
-      <File FileName="Assets\Scripts\ShootManager.cs" Line="99" Column="6" />
+      <File FileName="Assets\Scripts\ShootManager.cs" Line="100" Column="36" />
+      <File FileName="Assets\Scripts\Test.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\RPGRocket.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameManager.cs" Line="97" Column="30" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Fadein.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TouchControl.cs" Line="102" Column="4" />
+      <File FileName="Assets\Scripts\TouchControl.cs" Line="1" Column="1" />
       <File FileName="Assets\Standard Assets\CrossPlatformInput\Scripts\Joystick.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\RPGReady.cs" Line="8" Column="80" />
-      <File FileName="Assets\Scripts\SVDReady.cs" Line="8" Column="37" />
+      <File FileName="Assets\Scripts\RPGReady.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SVDReady.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
